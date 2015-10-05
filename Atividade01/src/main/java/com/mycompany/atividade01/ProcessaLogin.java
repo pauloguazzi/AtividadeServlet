@@ -64,7 +64,7 @@ public class ProcessaLogin extends HttpServlet {
             
             if  (request.getMethod().equalsIgnoreCase("post")) {
                 if ((login.equals(senha) == false) || login.isEmpty() || senha.isEmpty()){
-                    response.sendRedirect("erro.html");
+                    response.sendRedirect("erro.xhtml");
                    
                 } else {
                     
