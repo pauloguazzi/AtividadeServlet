@@ -36,8 +36,8 @@ public class Sucesso extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
-            String query = request.getQueryString();
-            String split[] = query.split("=|&");
+            String login = request.getParameter("login");
+            String perfil = request.getParameter("perfil");
             
             
             out.println("<!DOCTYPE html>");
@@ -46,7 +46,7 @@ public class Sucesso extends HttpServlet {
             out.println("<title>Servlet Sucesso</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Acesso a " + split[1] + " " + split[3] + " permitido.</h1>");
+            out.println("<h1>Acesso a " +perfil+ " " + login + " permitido.</h1>");
             out.println("</body>");
             out.println("</html>");
         }
