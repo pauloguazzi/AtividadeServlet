@@ -36,16 +36,7 @@ public class ProcessaLogin extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ProcessaLogin</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ProcessaLogin at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-            
+                    
             
             String login = request.getParameter("login");
             String senha = request.getParameter("senha");
@@ -68,9 +59,7 @@ public class ProcessaLogin extends HttpServlet {
                    
                 } else {
                     
-                    String querystr = "login=" + login + "&perfil=" + perfil;
-                                   
-                    response.sendRedirect("sucesso?" + querystr);
+                    response.sendRedirect(request.getContextPath() + "/sucesso?login="+login+"&perfil="+perfil);
                    
                     
                     //out.println("<h2>Olá, " + querystr + "</h2>");
