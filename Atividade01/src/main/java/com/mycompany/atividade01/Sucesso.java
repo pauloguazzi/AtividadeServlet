@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet(name = "sucesso", urlPatterns = {"/sucesso"})
-public class sucesso extends HttpServlet {
+public class Sucesso extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
