@@ -19,7 +19,8 @@ import javax.servlet.http.HttpServletResponse;
  * @author Paulo Guazzi
  */
 //WebServlet("/ProcessaLogin")
-@WebServlet(name = "ProcessaLogin", urlPatterns = "/ProcessaLogin")
+@WebServlet(name = "Processa Login", urlPatterns = {"/login"})
+
 public class ProcessaLogin extends HttpServlet {
 
     /**
