@@ -13,13 +13,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Paulo Guazzi
- */
-@WebServlet("/sucesso")
-//@WebServlet(name = "Sucesso", urlPatterns = {"/sucesso"})
-public class Sucesso extends HttpServlet {
+
+@WebServlet(name = "sucesso", urlPatterns = {"/sucesso"})
+public class sucesso extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,19 +30,20 @@ public class Sucesso extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
             
+          
             String login = request.getParameter("login");
             String perfil = request.getParameter("perfil");
             
-            
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
+            out.println("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n" +
+"         \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">");
+            out.println("<html xmlns=\"http://www.w3.org/1999/xhtml\">");
             out.println("<head>");
-            out.println("<title>Servlet Sucesso</title>");            
+            out.println("<title>Servlet sucesso</title>");
+            out.println("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Acesso a " +perfil+ " " + login + " permitido.</h1>");
+            out.println("<h1>Acesso a "+perfil+" "+login+" permitido</h1>");
             out.println("</body>");
             out.println("</html>");
         }
